@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto IMC</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="img/logo.png" alt="descrição da imagem para leitores de tela">
+    </div>
+
+    <div class="container">
+
+        <div class="conteudo">
+
+            <h1>Calcule seu IMC</h1>
+
+            <p>IMC é a sigla para Índice de Massa Corporal, parâmetro adotado pela Organização Mundial de Saúde para
+                calcular o peso ideal de cada pessoa.</p>
+
+            <table>
+
+                <tr>
+                    <th>IMC</th>
+                    <th>Classificação</th>
+                </tr>
+
+                <tr>
+                    <td>Menor que 18.5</td>
+                    <td>Magreza</td>
+                </tr>
+
+                <tr>
+                    <td>Entre 18.5 e 24.9</td>
+                    <td>Normal</td>
+                </tr>
+
+                <tr>
+                    <td>Entre 25.0 e 29.9</td>
+                    <td>Sobrepeso</td>
+                </tr>
+
+                <tr>
+                    <td>Maior que 29.9</td>
+                    <td>Obesidade</td>
+                </tr>
+
+            </table>
+
+            <div class="imc">
+
+                <div class="from-imc">
+                    <form>
+
+                        <div>
+                            <label for="altura">Altura:</label><br>
+                            <input type="text" placeholder="EX: 1.70" id="altura">
+                        </div>
+
+                        <div>
+                            <label for="peso">Peso:</label><br>
+                            <input type="text" placeholder="EX: 66.5" id="peso">
+                        </div>
+
+                        <button type="button" onclick="calcularimc ()">calcular</button>
+
+                    </form>
+
+
+                </div>
+
+                <div class="resultado-imc" id="resulatdo">
+                    <h2>Seu IMC:<br> <span id="valorImc"></span> </h2>
+                </div>
+
+                <div id="ajuda">
+                    <p> Precisa de ajuda?
+                        <a href="http://www.youtube.com/@RobertasGymBrasil"> Confira nosso canal no youtube</a>
+                    </p>
+                </div>
+            </div>
+
+        </div> <!--fim da div conteúdo-->
+
+        <div class="imagem">
+            <img src="img/foto.jpg" alt="">
+        </div>
+
+    </div> <!--fim da div container-->
+
+
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <script>
+        // inicializando a biblioteca jQuery
+        $(document).ready(function () {
+
+            $('#altura').mask('0.00');
+            $('#peso').mask('000.0', { reverse: true });
+
+        })
+
+
+
+    </script>
+
+
+</body>
+
+</html>
